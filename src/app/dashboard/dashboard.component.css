@@ -1,0 +1,27 @@
+.example-container {
+    width: 100%;
+    height: calc(100% - 64px);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 30px;
+  }
+
+  table {
+    width: 100%;
+  }
+  .flo {
+    background-color: aquamarine;
+  }
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}

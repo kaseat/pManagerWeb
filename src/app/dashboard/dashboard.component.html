@@ -1,7 +1,29 @@
 <mat-toolbar color="primary">
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-  </mat-toolbar>
+  <button type="button" mat-button (click)="drawer.toggle()">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+  </button>
+  <span class="toolbar-spacer"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">exit_to_app</mat-icon>Logout
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+  <div class="container-fluid">
+    <div class="row">
+      <app-card title="Earnings (Monthly)" value="$5000" class="col w-100"></app-card>
+      <app-card title="Earnings (daily)" value="$500" class="col w-100"></app-card>
+    </div>
+  </div>
+</mat-drawer-container>
