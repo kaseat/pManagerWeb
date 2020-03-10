@@ -8,7 +8,7 @@
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Settings</button>
-    <button mat-menu-item>Logout</button>
+    <button mat-menu-item (click)="auth.logout()">Logout</button>
   </mat-menu>
 </mat-toolbar>
 

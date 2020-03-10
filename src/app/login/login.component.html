@@ -14,9 +14,14 @@
     </mat-form-field>
   </p>
 
+  <p *ngIf="errMsg" class="error">
+    {{ errMsg }}
+  </p>
+
   <div class="button">
-    <button [disabled]="!form.valid" type="submit" mat-button>Login</button>
+    <button [disabled]="!form.valid" type="submit" (click)="login()" mat-button>Login</button>
   </div>
+  
 
 </form>
 </mat-card-content>
