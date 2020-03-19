@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiPath: 'http://localhost/api',
-  getTokenPath: '/auth/getjwt'
+  getTokenPath: '/auth/getjwt',
+  validateTokenPath: '/token/validate'
 };
 
 /*

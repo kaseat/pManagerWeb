@@ -2,10 +2,9 @@
   <button type="button" mat-button (click)="drawer.toggle()">
     <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
   </button>
+  pManager
   <span class="toolbar-spacer"></span>
-  <button mat-button [matMenuTriggerFor]="menu">
-    <mat-icon aria-hidden="false" aria-label="Example home icon">exit_to_app</mat-icon>Logout
-  </button>
+  <button mat-button [matMenuTriggerFor]="menu">{{ auth.getUsername() }}</button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item>Settings</button>
     <button mat-menu-item (click)="auth.logout()">Logout</button>
